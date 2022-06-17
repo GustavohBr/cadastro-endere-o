@@ -1,0 +1,31 @@
+<html>
+    <h1>Endereços Cadastrados</h1>
+    <body>
+        <table>
+            <tr>
+                <th>CEP</th>
+                <th>Endereço</th>
+                <th>Número</th>
+                <th>Complemento</th>
+                <th>Bairro</th>
+                <th>Cidade</th>
+                <th>UF</th>
+                <th>Descrição</th>
+            </tr>
+            {% for end in lista_end %}
+            <tr>
+                <th>{{ end.cep }}</th>
+                <th>{{ end.endereço }}</th>
+                <th>{{ end.numero }}</th>
+                <th>{{ end.complemento }}</th>
+                <th>{{ end.bairro }}</th>
+                <th>{{ end.cidade }}</th>
+                <th>{{ end.UF }}</th>
+                <th>{{ end.descriçao }}</th>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <input type="button" onclick="window.location.href='/cadastro'" value="Cadastrar">
+    </body>
+</html>
